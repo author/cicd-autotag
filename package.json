@@ -1,0 +1,25 @@
+{
+  "name": "@author.io/cicd-autotag",
+  "version": "1.0.0",
+  "description": "Determines whether the local version of a module is newer than the latest published version of the module on the registry.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "autotag": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/author/cicd-npm-versioncheck.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": "Author.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/author/cicd-npm-versioncheck/issues"
+  },
+  "homepage": "https://github.com/author/cicd-npm-versioncheck#readme"
+}
