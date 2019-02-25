@@ -7,7 +7,7 @@ const latestPublishedVersion = JSON.parse(exec(`npm info ${pkg.name} --json`).to
 
 if (!semver.gt(pkg.version, latestPublishedVersion)) {
   console.log(`No update required. This build is for version ${pkg.version}. The latest published to npm is ${latestPublishedVersion}.`)
-  process.exit(1)
+  process.exit(0)
 } else {
   let remote = process.env.DRONE_GIT_HTTP_URL.replace('://', '://' + process.env.GIT_USER + ':' + process.env.GIT_SECRET.replace('@', '%40') + '@');
 
