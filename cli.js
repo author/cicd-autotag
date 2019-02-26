@@ -5,7 +5,7 @@ const pkg = require(require('path').join(process.cwd(), 'package.json'))
 const exec = require('child_process').execSync
 
 try {
-  const latestPublishedVersion = JSON.parse().versions.pop()
+  const latestPublishedVersion = JSON.parse(exec(`npm info ${pkg.name} --json`).toString()).versions.pop()
 
   if (!semver.gt(pkg.version, latestPublishedVersion)) {
     console.log(`No update required. This build is for version ${pkg.version}. The latest published to npm is ${latestPublishedVersion}.`)
