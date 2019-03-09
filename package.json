@@ -1,6 +1,6 @@
 {
   "name": "@author.io/cicd-autotag",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Determines whether the local version of a module is newer than the latest published version of the module on the registry.",
   "main": "index.js",
   "scripts": {
