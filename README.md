@@ -39,3 +39,17 @@ steps:
       event:
         - push
 ```
+
+## Initial Releases (new npm modules)
+
+By default, autotag will **not** succeed if it cannot find the npm module in the
+npm registry. This feature prevents accidental publishing of new modules.
+
+However; there are circumstances where new modules _should_ by published. To do
+this, pass the `--allowInitialNpmPublish` flag to the command. For example:
+
+```yml
+commands:
+  - npm install -g @author.io/cicd-autotag
+  - autotag --allowInitialNpmPublish
+```

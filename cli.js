@@ -14,7 +14,7 @@ try {
 
   console.log(`Update release from ${latestPublishedVersion} --> ${pkg.version}`)
 } catch (e) {
-  if (e.message.toLowerCase().indexOf('is not in the npm registry') < 0) {
+  if (e.message.toLowerCase().indexOf('is not in the npm registry') < 0 && process.argv.indexOf('--allowInitialNpmPublish') < 0) {
     console.log(e)
     process.exit(1)
   }
